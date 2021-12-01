@@ -51,6 +51,9 @@ AB_OTA_PARTITIONS += \
 
 TW_INCLUDE_REPACKTOOLS := true
 
+# No recovery partition
+BOARD_USES_RECOVERY_AS_BOOT := true
+
 # Kernel
 BOARD_KERNEL_CMDLINE := bootopt=64S3,32N2,64N2 buildvariant=user veritykeyid=id:8f56f02c61394639f13af4e8cfe02d087e41b936
 TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/Image.gz
