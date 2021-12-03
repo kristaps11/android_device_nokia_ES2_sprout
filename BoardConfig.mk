@@ -2,11 +2,12 @@
 # Copyright (C) 2021 The Android Open Source Project
 # Copyright (C) 2021 SebaUbuntu's TWRP device tree generator
 # Copyright (C) 2021 FieryFlames
+# Copyright (C) 2021 belkaliz
 #
 # SPDX-License-Identifier: Apache-2.0
 #
 
-DEVICE_PATH := device/nokia/CO2_sprout
+DEVICE_PATH := device/nokia/ES2_sprout
 
 # For building with minimal manifest
 ALLOW_MISSING_DEPENDENCIES := true
@@ -27,7 +28,7 @@ TARGET_BOARD_SUFFIX := _64
 TARGET_USES_64_BIT_BINDER := true
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := Core2,CO2,CO2_sprout
+TARGET_OTA_ASSERT_DEVICE := Essential2,ES2,ES2_sprout
 
 # File systems
 BOARD_HAS_LARGE_FILESYSTEM := true
@@ -55,9 +56,9 @@ TW_INCLUDE_REPACKTOOLS := true
 BOARD_USES_RECOVERY_AS_BOOT := true
 
 # Kernel
-BOARD_KERNEL_CMDLINE := bootopt=64S3,32N2,64N2 buildvariant=user veritykeyid=id:8f56f02c61394639f13af4e8cfe02d087e41b936
+BOARD_KERNEL_CMDLINE := bootopt=64S3,32N2,64N2 buildvariant=user veritykeyid=id:7e4333f9bba00adfe0ede979e28ed1920492b40f
 TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/Image.gz
-TARGET_PREBUILT_DTB := $(DEVICE_PATH)/prebuilt/mtk.dtb
+TARGET_PREBUILT_DTB := $(DEVICE_PATH)/prebuilt/dt.img
 BOARD_BOOTIMG_HEADER_VERSION := 2
 BOARD_KERNEL_BASE := 0x40078000
 BOARD_KERNEL_PAGESIZE := 2048
@@ -72,7 +73,7 @@ BOARD_KERNEL_IMAGE_NAME := Image.gz
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
 TARGET_KERNEL_SOURCE := kernel/nokia/mt6755
-TARGET_KERNEL_CONFIG := CO2_defconfig
+TARGET_KERNEL_CONFIG := ES2_defconfig
 
 # Platform
 TARGET_BOARD_PLATFORM := mt6750
