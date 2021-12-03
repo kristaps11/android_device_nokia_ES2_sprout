@@ -59,8 +59,12 @@ AB_OTA_PARTITIONS += \
 
 TW_INCLUDE_REPACKTOOLS := true
 
+# Use custom mkbootimg
+BOARD_CUSTOM_MKBOOTIMG := $(DEVICE_PATH)/prebuilt/mkbootimg
+
 # No recovery partition
 BOARD_USES_RECOVERY_AS_BOOT := true
+TW_HAS_NO_RECOVERY_PARTITION := true
 
 # Kernel
 BOARD_KERNEL_CMDLINE := bootopt=64S3,32N2,64N2 buildvariant=user veritykeyid=id:7e4333f9bba00adfe0ede979e28ed1920492b40f
