@@ -55,7 +55,10 @@ AB_OTA_UPDATER := true
 AB_OTA_PARTITIONS += \
     boot \
     system \
-    vendor
+    vendor \
+    lk \
+    systeminfo \
+    tee
 
 TW_INCLUDE_REPACKTOOLS := true
 
