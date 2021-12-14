@@ -25,3 +25,8 @@ PRODUCT_NAME := omni_ES2_sprout
 PRODUCT_BRAND := Nokia
 PRODUCT_MODEL := Nokia 3.1
 PRODUCT_MANUFACTURER := FIH Mobile
+
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    ro.secure=0 \
+    ro.adb.secure=0 \
+    ro.debuggable=1
