@@ -23,8 +23,16 @@ It was released in May 2018.
   <img src="https://fdn2.gsmarena.com/vv/pics/nokia/nokia-31-1.jpg" alt="nokia-3.1"/>
 </p>
 
+## Building
+
+- [Download twrp9.0 sources](https://github.com/minimal-manifest-twrp/platform_manifest_twrp_omni)
+- Create directory device/nokia/ES2_sprout in omni sources and clone this repo into it.
+- Allow to use custom mkbootimg ```chmod +x device/nokia/ES2_sprout/prebuilt/mkbootimg```
+- Select userdebug build ```lunch omni_ES2_sprout-userdebug```
+- Make boot.img ```make -jX bootimage``` where X - count of CPU cores.
+
 ## Notes
 
-In my testing, we need the phone to be unencrypted to boot custom kernels on stock. Custom ROMs are untested due to none existing yet for ES2.
+Decryption not works!
 
 To get the phone to not forceencrypt, you need to flash [Universal DM-Verity, ForceEncrypt, Disk Quota Disabler](https://zackptg5.com/downloads/archive/Disable_Dm-Verity_ForceEncrypt_11.02.2020.zip) & wipe data in TWRP.
